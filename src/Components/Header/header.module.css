@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.all__container {
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  align-content: flex-start;
+}
+.all__container a {
+  color: rgb(255, 255, 255);
+}
+
+.flag__container {
+  display: flex;
+}
+.logo_Container {
+  display: flex;
+  color: white;
+  max-width: 250px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_Container img {
+  width: 80%;
+  margin-left: 5px;
+  padding-top: 10px;
+  vertical-align: middle;
+}
+.delivery p {
+  font-size: 10px;
+}
+.delivery {
+  display: flex;
+  padding: 5px;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.searchBar {
+  min-width: 200px;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
+  height: 45px;
+  border-radius: 8px;
+  border: 2px solid #ff9900;
+  background-color: white;
+}
+.searchBar span {
+  color: white;
+}
+.searchBar select,
+.searchBar input {
+  padding: 10px;
+  outline: 1px solid white;
+  font-weight: bold;
+}
+.searchBar select {
+  border: none;
+}
+.searchBar input {
+  width: 100%;
+  border: 1px;
+  margin-right: -2px;
+}
+.searchIcon:hover {
+  background-color: #d49644;
+}
+.searchBar:focus-within {
+  border: 2px solid pink;
+}
+.searchIcon {
+  height: 100%;
+  width: 50px;
+  background-color: #febd69;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order_container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  max-width: 450px;
+  font-weight: bold;
+  color: white;
+  gap: 10px;
+}
+.order_container p {
+  font-size: 10px;
+}
+.language {
+  display: flex;
+  width: 100px;
+  padding: 10px;
+}
+.language select {
+  background-color: #1a1a1a;
+  border: none;
+  color: white;
+}
+.language span {
+  width: 40%;
+}
+.cart {
+  position: relative;
+}
+.cart span {
+  position: absolute;
+  background-color: #1a1a1a;
+  font-weight: bold;
+  top: 0px;
+  font-size: 20;
+  color: orange;
+  left: 16px;
+}
+.cart svg {
+  color: white;
+}
+.lower_header ul {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+  background-color: #0a0a2a;
+  color: white;
+}
+
+.lower_header ul li {
+  padding: 8px;
+}
+.lower_header ul li:first-child {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+.lower_header ul li:hover {
+  border: 1px solid white;
+}
+@media (max-width: 576px) {
+  .all__container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 5px;
+  }
+  .searchBar {
+    order: 3;
+    width: 100%;
+  }
+  .logo_Container {
+    order: 1;
+  }
+  .order_container {
+    order: 2;
+    margin-left: auto;
+  }
+  .delivery {
+    display: none;
+  }
+  .language {
+    display: none;
+  }
+  .lower_header ul {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .logo_Container img {
+    height: 70px;
+    width: auto;
+    margin-left: 5px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  /* 1. Header container tighter */
+  .all__container {
+    min-height: 65px;
+    padding: 6px 10px;
+    gap: 8px;
+  }
+
+  /* 2. Logo (keep it big but controlled) */
+  .logo_Container img {
+    height: 52px;
+    width: auto;
+    margin-left: 5px;
+  }
+
+  /* 3. Hide delivery (saves space) */
+  .delivery {
+    display: none;
+  }
+
+  /* 4. Search bar (slightly smaller height) */
+  .searchBar {
+    height: 42px;
+    flex: 1;
+  }
+
+  /* 5. Dropdown smaller */
+  .searchBar select {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  /* 6. Input smaller */
+  .searchBar input {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  /* 7. Search icon tighter */
+  .searchIcon {
+    width: 45px;
+  }
+
+  /* 8. Right side compact */
+  .order_container {
+    gap: 8px;
+  }
+
+  /* 9. Hide language (not important here) */
+  .language {
+    display: none;
+  }
+
+  /* 10. Smaller text */
+  .order_container p {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  .order_container span {
+    font-size: 15px;
+  }
+
+  /* 11. Smaller cart */
+  .cart svg {
+    width: 28px;
+    height: 28px;
+  }
+}

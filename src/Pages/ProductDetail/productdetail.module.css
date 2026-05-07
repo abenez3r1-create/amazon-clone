@@ -1,0 +1,29 @@
+.details__container {
+  display: flex;
+  gap: 50px;
+}
+.image img {
+  width: 270px;
+}
+.description {
+  margin: 20px;
+}
+.description p {
+  width: 700px;
+  padding-top: 10px;
+}
+.description button {
+  display: block; /* ❌ remove display:none */
+  padding: 8px;
+  font-size: 14px;
+  color: #111;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 30vh;
+  margin-top: 20px;
+}
+.description h3 {
+  color: red;
+}
