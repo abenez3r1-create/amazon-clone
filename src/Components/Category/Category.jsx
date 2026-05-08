@@ -6,7 +6,7 @@ function Category() {
   return (
     <div className={classes.category__container}>
       {CategoryInfos.map((Infos) => (
-        <CategoryImages data={Infos} />
+        <CategoryImages data={Infos} key={Infos.id} />
       ))}
     </div>
   );

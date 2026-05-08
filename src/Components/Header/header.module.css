@@ -4,7 +4,11 @@
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.all__father {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 .all__container {
   background-color: #1a1a1a;
   display: flex;

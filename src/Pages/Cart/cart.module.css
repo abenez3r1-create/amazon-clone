@@ -1,0 +1,145 @@
+.cart__container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #eaeded;
+  min-height: 100vh;
+}
+
+/* LEFT SIDE */
+.cart__left {
+  flex: 0.75;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cart__left h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cart__left h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.cart__left hr {
+  margin-bottom: 20px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* PRODUCT ITEM */
+.details__container {
+  display: flex;
+  gap: 25px;
+  padding: 20px 0;
+  border-bottom: 1px solid #d5d9d9;
+  background-color: white;
+}
+
+/* IMAGE */
+.details__container img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+/* PRODUCT INFO */
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.description h1,
+.description h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f1111;
+}
+
+.description p {
+  font-size: 15px;
+  color: #565959;
+  line-height: 1.5;
+}
+
+.description h3 {
+  font-size: 22px;
+  color: #b12704;
+  font-weight: bold;
+}
+
+/* RIGHT SIDE */
+.cart__right {
+  flex: 0.25;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.subtotal h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.subtotal button {
+  background-color: #ffd814;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.subtotal button:hover {
+  background-color: #f7ca00;
+}
+
+/* EMPTY CART */
+.empty__cart {
+  background-color: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.empty__cart p {
+  font-size: 18px;
+  color: #565959;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 968px) {
+  .cart__container {
+    flex-direction: column;
+  }
+
+  .cart__right {
+    width: 100%;
+  }
+
+  .details__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details__container img {
+    width: 220px;
+  }
+}
