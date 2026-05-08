@@ -1,60 +1,107 @@
-.category {
-  width: 300px;
-  background-color: white;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.category__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 25px;
+
+  max-width: 1400px;
+  margin: -250px auto 0 auto;
+
+  padding: 20px;
+
+  position: relative;
+  z-index: 2;
 }
 
+/* CARD */
+.category {
+  background-color: white;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 420px;
+
+  transition: 0.2s ease;
+
+  border-radius: 6px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.category:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* LINK */
 .category a {
   display: flex;
   flex-direction: column;
+
   height: 100%;
+
   text-decoration: none;
   color: black;
 }
 
+/* TITLE */
 .category h1 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 21px;
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+  color: #0f1111;
 }
 
-/* KEY FIX */
+/* IMAGE */
 .category img {
   width: 100%;
-  height: 250px;
+  height: 280px;
+
   object-fit: contain;
-  margin-bottom: 10px;
+
+  margin-bottom: 20px;
+
+  transition: 0.2s ease;
 }
 
-/* push link to bottom */
+.category:hover img {
+  transform: scale(1.02);
+}
+
+/* SHOP NOW */
 .category p {
   margin-top: auto;
+
   font-size: 14px;
+  font-weight: 500;
+
   color: #007185;
 }
 
-/* GRID FIX */
-.category__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-
-  padding: 20px;
-
-  margin-top: -200px;
-  position: relative;
-  z-index: 2;
+.category p:hover {
+  color: #c7511f;
+  text-decoration: underline;
 }
-@media (max-width: 576px) {
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
   .category__container {
-    margin-top: -30px;
+    grid-template-columns: 1fr;
+
+    margin-top: -100px;
   }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  .category__container {
-    margin-top: -60px;
+
+  .category {
+    min-height: auto;
+  }
+
+  .category img {
+    height: 240px;
   }
 }

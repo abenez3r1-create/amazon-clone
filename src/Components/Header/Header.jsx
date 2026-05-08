@@ -8,6 +8,7 @@ import logo from "../../assets/logo.png";
 import LowerHeader from "../LowerHeader/LowerHeader";
 import { initialState, reducer } from "../../Utility/reducer";
 import { DataContext } from "../DataProvider/DataProvider";
+import flag from "../../assets/usflag.png";
 // import { useStateValue } from "../DataProvider/DataProvider";
 
 function Header() {
@@ -40,10 +41,10 @@ function Header() {
             </span>
           </div>
           <div className={classes.order_container}>
-            {/* <img src="" alt="flag" /> */}
             <Link to="#" className={classes.language}>
               <span>
-                <BiFlag />
+                {" "}
+                <img className={classes.flag_image} src={flag} alt="flag" />
               </span>
               <select name="" id="">
                 <option value="">EN</option>

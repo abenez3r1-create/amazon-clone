@@ -3,37 +3,13 @@ import LayOut from "../../Components/LayOut/LayOut";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
 import classes from "./cart.module.css";
 import ProductCards from "../../Components/Products/ProductCards";
+import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
+import { Link } from "react-router-dom";
 function Cart() {
   const [{ basket, user }, dispatch] = useContext(DataContext);
-  // return (
-  //   <LayOut>
-  //     <section>
-  //       <div>
-  //         <h2>Hello</h2>
-  //         <h3>Your Shopping Basket</h3>
-  //         <hr />
-  //         {basket?.length == 0 ? (
-  //           <p>No items in your Cart</p>
-  //         ) : (
-  //           basket?.map((item) => {
-  //             return (
-  //               <div className={classes.details__container}>
-  //                 <ProductCards
-  //                   key={item.id}
-  //                   product={item}
-  //                   isCart={true}
-  //                   hideButton={true}
-  //                   renderDesc={true}
-  //                 />
-  //               </div>
-  //             );
-  //           })
-  //         )}
-  //       </div>
-  //       <div></div>
-  //     </section>
-  //   </LayOut>
-  // );
+  const total = basket.reduce((amount, item) => {
+    return amount + item.price;
+  }, 0);
   return (
     <LayOut>
       <section className={classes.cart__container}>
@@ -69,8 +45,10 @@ function Cart() {
         <div className={classes.cart__right}>
           <div className={classes.subtotal}>
             <h2>Subtotal ({basket?.length} items)</h2>
-
-            <button>Proceed to Checkout</button>
+            <CurrencyFormat amount={total} />
+            <Link to="/payment">
+              <button>Proceed to Checkout</button>
+            </Link>
           </div>
         </div>
       </section>
