@@ -1,30 +1,76 @@
 .details__container {
   display: flex;
   gap: 50px;
+  padding: 30px;
+  background: white;
 }
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .image img {
-  width: 270px;
+  width: 100%;
+  max-width: 320px;
+  object-fit: contain;
 }
+
 .description {
-  margin: 20px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+
+.description h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
 .description p {
-  width: 700px;
-  padding-top: 10px;
+  line-height: 1.7;
+  color: #444;
+  max-width: 700px;
 }
-.description button {
-  display: block; /* ❌ remove display:none */
-  padding: 8px;
-  font-size: 14px;
+
+.description h3 {
+  color: #b12704;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.button {
+  padding: 10px;
+  font-size: 15px;
   color: #111;
   background: #ffd814;
   border: 1px solid #fcd200;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
-  width: 30vh;
-  margin-top: 20px;
+  width: 220px;
+  transition: 0.2s;
 }
-.description h3 {
-  color: red;
-  margin: 10px 0;
+
+.button:hover {
+  background: #f7ca00;
+}
+
+@media screen and (max-width: 768px) {
+  .details__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .description p {
+    width: 100%;
+  }
+
+  .button {
+    margin: auto;
+  }
 }

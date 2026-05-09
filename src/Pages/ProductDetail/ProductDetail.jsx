@@ -8,6 +8,7 @@ import productUrl from "../../API/Api";
 import { Type } from "../../Utility/action.type";
 import Loader from "../../Components/Loader/Loader";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
+import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
 // import CircularProgress from "@mui/material/CircularProgress";
 
 function ProductDetail() {
@@ -37,6 +38,7 @@ function ProductDetail() {
       item: product,
     });
   };
+
   return (
     <>
       {" "}
@@ -54,9 +56,9 @@ function ProductDetail() {
               <div className={classes.description}>
                 <h2>{product.title}</h2>
                 <p>{product.description}</p>
-                <h3>${product.price}</h3>
-                {/* <p>Category: {product.category}</p> */}
-                {/* <button>add to cart</button> */}
+                <h3>
+                  <CurrencyFormat amount={product.price} />
+                </h3>
                 <button className={classes.button} onClick={addToCart}>
                   add to cart
                 </button>

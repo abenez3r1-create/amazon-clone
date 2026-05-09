@@ -67,7 +67,7 @@ function ProductCards({
         }
       >
         <Link to={`/products/${encodeURIComponent(product?.id)}`}>
-          <img src={image} alt="" />
+          <img src={image} alt={title} />
         </Link>
         <div>
           <h1>{title}</h1>

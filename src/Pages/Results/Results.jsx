@@ -21,7 +21,7 @@ function Results() {
       .get(`${productUrl}/products/category/${decoded}`)
       .then((res) => {
         setResult(res.data);
-        console.log(res);
+        // console.log(res);
         setLoading(false);
       })
       .catch((err) => {
