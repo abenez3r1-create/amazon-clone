@@ -4,12 +4,13 @@ import ProductCards from "./ProductCards";
 import classes from "./product.module.css";
 function Product() {
   const [productState, setproductState] = useState();
+
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => {
         setproductState(res.data);
-        // console.log(res);
+        // console.log(res.data);
       })
       .catch((err) => {
         console.log("fetching error: " + err);

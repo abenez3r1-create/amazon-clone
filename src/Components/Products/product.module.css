@@ -1,12 +1,13 @@
 .product__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1500px;
+  gap: 10px;
+  max-width: 1200px;
   margin: 30px auto;
   padding: 20px;
   justify-items: center;
-  background-color: #eaeded;
+  /* background-color: #eaeded; */
+  background-color: #ffffff;
 }
 
 /* PRODUCT CARD */
@@ -25,7 +26,7 @@
   border: 1px solid #e7e7e7;
 
   transition: all 0.2s ease;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .card__container:hover {
@@ -84,23 +85,58 @@
   color: #0f1111;
   margin: 10px 0;
 }
+.quantity__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
+  gap: 10px;
+
+  width: 100%;
+
+  margin-top: 15px;
+}
+
+.quantity__container button {
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #d5d9d9;
+  background-color: #f0f2f2;
+
+  border-radius: 50%;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.quantity__container button:hover {
+  background-color: #e3e6e6;
+}
+
+.quantity__container span {
+  min-width: 20px;
+
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: bold;
+}
 /* BUTTON */
 .button {
   margin-top: auto;
-
   width: 100%;
   padding: 10px;
-
   border: none;
   border-radius: 50px;
-
   background-color: #ffd814;
   color: #111;
-
   font-size: 14px;
   font-weight: 500;
-
   cursor: pointer;
   transition: 0.2s ease;
 }

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Cart() {
   const [{ basket, user }, dispatch] = useContext(DataContext);
   const total = basket.reduce((amount, item) => {
-    return amount + item.price;
+    return amount + item.price * item.quantity;
   }, 0);
   return (
     <LayOut>
@@ -34,6 +34,7 @@ function Cart() {
                     isCart={true}
                     hideButton={true}
                     renderDesc={true}
+                    quantityCounter={true}
                   />
                 </div>
               );

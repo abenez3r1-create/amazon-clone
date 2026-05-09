@@ -13,6 +13,9 @@ import flag from "../../assets/usflag.png";
 
 function Header() {
   const [{ basket }, dispatch] = useContext(DataContext);
+  const totalItem = basket?.reduce((quantity, item) => {
+    return item.quantity + quantity;
+  }, 0);
   return (
     <section className={classes.all__father}>
       <section className={classes.header__container}>
@@ -66,7 +69,7 @@ function Header() {
             <div className={classes.cart}>
               <Link to="/cart">
                 <BiCart size={35} />
-                <span>{basket.length}</span>
+                <span>{totalItem}</span>
                 {/* <span>0</span> */}
               </Link>
             </div>
