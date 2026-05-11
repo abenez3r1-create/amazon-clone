@@ -5,7 +5,9 @@ import { DataProvider } from "./Components/DataProvider/DataProvider.jsx";
 import { reducer } from "./Utility/reducer.js";
 import { initialState } from "./Utility/reducer.js";
 createRoot(document.getElementById("root")).render(
-  <DataProvider reducer={reducer} initialState={initialState}>
-    <App />
-  </DataProvider>,
+  <StrictMode>
+    <DataProvider reducer={reducer} initialState={initialState}>
+      <App />
+    </DataProvider>
+  </StrictMode>,
 );

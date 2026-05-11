@@ -9,8 +9,6 @@ import { Type } from "../../Utility/action.type";
 import Loader from "../../Components/Loader/Loader";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
 import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
-// import CircularProgress from "@mui/material/CircularProgress";
-
 function ProductDetail() {
   const [isLoading, setLoading] = useState(false);
   const { id } = useParams();

@@ -36,6 +36,7 @@ export const reducer = (state, action) => {
           },
         ],
       };
+
     case Type.INCREASE_QUANTITY:
       return {
         ...state,
