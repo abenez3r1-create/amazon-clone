@@ -9,10 +9,11 @@ import LowerHeader from "../LowerHeader/LowerHeader";
 import { initialState, reducer } from "../../Utility/reducer";
 import { DataContext } from "../DataProvider/DataProvider";
 import flag from "../../assets/usflag.png";
+import { auth } from "../../Utility/firebase";
 // import { useStateValue } from "../DataProvider/DataProvider";
 
 function Header() {
-  const [{ basket }, dispatch] = useContext(DataContext);
+  const [{ basket, user }, dispatch] = useContext(DataContext);
   const totalItem = basket?.reduce((quantity, item) => {
     return item.quantity + quantity;
   }, 0);
@@ -55,9 +56,20 @@ function Header() {
             </Link>
 
             <div>
-              <Link to="/auth">
-                <p>sign in</p>
-                <span>Account & Lists</span>
+              <Link to={!user && "/auth"}>
+                <div>
+                  {user ? (
+                    <>
+                      <p>Hello {user?.email?.split("@")[0]}</p>
+                      <span onClick={() => auth.signOut()}>SignOut</span>
+                    </>
+                  ) : (
+                    <>
+                      <p>SignIn</p>
+                      <span>Account & Lists</span>
+                    </>
+                  )}
+                </div>
               </Link>
             </div>
             <div>

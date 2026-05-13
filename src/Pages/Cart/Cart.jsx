@@ -15,7 +15,7 @@ function Cart() {
       <section className={classes.cart__container}>
         {/* LEFT SIDE */}
         <div className={classes.cart__left}>
-          <h2>Hello {user?.email}</h2>
+          <h2>Hello {user?.email.split("@")[0]}</h2>
 
           <h3>Your Shopping Basket</h3>
 

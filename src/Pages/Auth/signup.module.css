@@ -1,53 +1,44 @@
 .all__container {
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  padding-top: 20px;
-  font-family: Arial, sans-serif;
-}
-
-/* Logo */
-.logo_image {
-  margin-bottom: 20px;
+  margin-top: 50px;
+  min-height: 100vh;
+  background-color: rgb(255, 255, 255);
 }
 
 .logo_image img {
-  width: 120px;
+  width: 150px;
   object-fit: contain;
+  margin-bottom: 18px;
 }
 
-/* Login Box */
 .login {
   width: 350px;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  background-color: white;
+  padding: 20px 26px;
 }
 
-/* Forms */
 .login form {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+}
+
+.login form div {
+  display: flex;
+  flex-direction: column;
 }
 
 .login label {
-  margin-top: 10px;
   font-size: 14px;
   font-weight: 700;
-  color: #111;
+  margin-bottom: 5px;
+  margin-top: 14px;
 }
 
 .login input {
-  height: 34px;
-  padding: 0 10px;
+  padding: 10px;
   border: 1px solid #888c8c;
   border-radius: 4px;
   outline: none;
@@ -55,59 +46,49 @@
 }
 
 .login input:focus {
-  border-color: #f0c14b;
-  box-shadow: 0 0 5px rgba(228, 121, 17, 0.5);
+  border-color: #e77600;
+  box-shadow: 0 0 3px #e77600;
 }
 
-/* Sign In Button */
 .signin_btn {
-  margin-top: 20px;
-  width: 100%;
-  height: 36px;
+  margin-top: 18px;
+  height: 35px;
+  border: none;
+  border-radius: 50px;
   background-color: #ffd814;
-  border: 1px solid #fcd200;
-  border-radius: 20px;
   cursor: pointer;
   font-size: 14px;
-  color: #0f1111;
-  transition: 0.2s ease;
 }
 
 .signin_btn:hover {
   background-color: #f7ca00;
 }
 
-/* Disclaimer */
 .login p {
+  margin-top: 18px;
   font-size: 12px;
   line-height: 1.5;
-  color: #565957;
+  color: #565959;
 }
 
-/* Create Account Button */
 .create_btn {
-  width: 100%;
-  height: 36px;
+  margin-top: 22px;
+  height: 35px;
   border: 1px solid #d5d9d9;
-  border-radius: 20px;
+  border-radius: 50px;
   background-color: white;
   cursor: pointer;
   font-size: 14px;
-  transition: 0.2s ease;
 }
 
 .create_btn:hover {
   background-color: #f7fafa;
 }
-
-/* Responsive */
-@media screen and (max-width: 400px) {
-  .login {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .logo_image img {
-    width: 100px;
-  }
+.back {
+  margin: 15px;
+  position: absolute;
+}
+.back a {
+  text-decoration: none;
+  color: rgba(34, 31, 31, 0.991);
 }
