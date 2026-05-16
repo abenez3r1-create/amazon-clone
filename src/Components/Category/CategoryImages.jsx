@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./category.module.css";
-import { Link } from "react-router-dom";
+import { data, Link } from "react-router-dom";
 function CategoryImages({ data }) {
   return (
     <>
@@ -15,5 +15,6 @@ function CategoryImages({ data }) {
     </>
   );
 }
+console.log(data);
 
 export default CategoryImages;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";
 import { BiCart, BiFlag } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Amazon_Logo_1.png";
 import LowerHeader from "../LowerHeader/LowerHeader";
 import { initialState, reducer } from "../../Utility/reducer";
 import { DataContext } from "../DataProvider/DataProvider";

@@ -12,6 +12,7 @@ function ProductCards({
   hideButton,
   renderDesc,
   quantityCounter,
+  flex,
 }) {
   if (!product) return null;
   const [{ basket }, dispatch] = useContext(DataContext);
@@ -66,14 +67,16 @@ function ProductCards({
           isCart ? classes.details__container : classes.card__container
         }
       >
-        <Link to={`/products/${encodeURIComponent(product?.id)}`}>
-          <img src={image} alt={title} />
-        </Link>
-        <div>
-          <h1>{title}</h1>
-          {renderDesc && <div>{description}</div>}
-          <Rating value={rating?.rate || 0} precision={0.1} />
-          <small>{rating?.count || 0}</small>
+        <div className={flex && classes.flex}>
+          <Link to={`/products/${encodeURIComponent(product?.id)}`}>
+            <img src={image} alt={title} />
+          </Link>
+          <div>
+            <h1>{title}</h1>
+            {renderDesc && <div>{description}</div>}
+            <Rating value={rating?.rate || 0} precision={0.1} />
+            <small>{rating?.count || 0}</small>
+          </div>
         </div>
         <div>
           <CurrencyFormat amount={price} />
