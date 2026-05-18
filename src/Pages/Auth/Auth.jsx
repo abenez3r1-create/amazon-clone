@@ -3,7 +3,7 @@ import classes from "./signup.module.css";
 import logo from "../../assets/amazon_auth.png";
 import { auth } from "../../Utility/firebase";
 import { ClipLoader, PulseLoader } from "react-spinners";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import {
   signInWithEmailAndPassword,
@@ -19,6 +19,8 @@ function Auth() {
   const [loading, setloading] = useState(false);
   const [createloading, setcreateloading] = useState(false);
   const navigate = useNavigate();
+  const navStateData = useLocation();
+  // console.log(navStateData);
   async function authHandler(e) {
     e.preventDefault();
     if (e.currentTarget.name == "signIn") {
@@ -26,7 +28,7 @@ function Auth() {
       signInWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
           setloading(false);
-          navigate("/");
+          navigate(navStateData?.state?.redirect || "/");
           // console.log(userInfo);
           dispatch({
             type: Type.SET_USER,
@@ -47,7 +49,7 @@ function Auth() {
             type: Type.SET_USER,
             user: userInfo.user,
           });
-          navigate("/");
+          navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setcreateloading(false);
@@ -62,6 +64,11 @@ function Auth() {
           <Link to="/">
             <img src={logo} alt="" />
           </Link>
+        </div>
+        <div>
+          {navStateData?.state?.msg && (
+            <small style={{ color: "red" }}>{navStateData?.state?.msg}</small>
+          )}
         </div>
         <div className={classes.login}>
           <form action="">

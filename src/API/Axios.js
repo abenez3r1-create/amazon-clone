@@ -1,2 +1,4 @@
 import axios from "axios";
-const Instance = { baseUrl };
+export const Instance = axios.create({
+  baseURL: "https://amazon-backend-8vpd.onrender.com",
+});

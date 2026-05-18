@@ -13,6 +13,7 @@ function ProductCards({
   renderDesc,
   quantityCounter,
   flex,
+  paymentStyle,
 }) {
   if (!product) return null;
   const [{ basket }, dispatch] = useContext(DataContext);
@@ -64,7 +65,11 @@ function ProductCards({
     <>
       <div
         className={
-          isCart ? classes.details__container : classes.card__container
+          paymentStyle
+            ? classes.payment__container
+            : isCart
+              ? classes.details__container
+              : classes.card__container
         }
       >
         <div className={flex && classes.flex}>

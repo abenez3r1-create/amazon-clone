@@ -15,6 +15,6 @@ function CategoryImages({ data }) {
     </>
   );
 }
-console.log(data);
+// console.log(data);
 
 export default CategoryImages;
