@@ -1,6 +1,6 @@
 import men from "../../assets/men.jpg";
 import women from "../../assets/women.jpg";
-import electronics from "../../assets/electronics.jpg";
+import electronics from "../../assets/electronics.webp";
 import jewelry from "../../assets/jewelry.jpg";
 
 const CategoryInfos = [
