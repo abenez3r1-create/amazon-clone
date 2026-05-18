@@ -1,0 +1,138 @@
+.footer {
+  background: #111827; /* softer than pure black */
+  color: #d1d5db;
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+}
+
+/* BACK TO TOP */
+.backToTop {
+  background: #1f2937;
+  text-align: center;
+  padding: 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+  border-bottom: 1px solid #2d3748;
+}
+
+.backToTop:hover {
+  background: #2b3648;
+  color: #ffffff;
+}
+
+/* MAIN GRID */
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 55px 20px;
+  gap: 40px;
+}
+
+/* HEADINGS */
+.column h3 {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* LINKS */
+.column a {
+  display: block;
+  color: #cbd5e1;
+  font-size: 13px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.column a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* LANGUAGE BAR */
+.languageBar {
+  border-top: 1px solid #2d3748;
+  border-bottom: 1px solid #2d3748;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  padding: 18px;
+  background: #111827;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.selectBox select {
+  background: #1f2937;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+/* BOTTOM */
+.bottom {
+  background: #0f172a;
+  text-align: center;
+  padding: 22px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  font-size: 12px;
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #ffffff;
+}
+
+.bottom p {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .languageBar {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .selectBox {
+    flex-direction: column;
+  }
+}

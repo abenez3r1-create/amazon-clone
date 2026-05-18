@@ -38,6 +38,11 @@ function Header() {
           <div className={classes.searchBar}>
             <select name="" id="">
               <option value="">All</option>
+              <option value="">Gaming</option>
+              <option value="">Movie</option>
+              <option value="">Clothing</option>
+              <option value="">Kitchen</option>
+              <option value="">Accessories</option>
             </select>
             <input type="text" name="" id="" placeholder="Search Product" />
             <span className={classes.searchIcon}>
